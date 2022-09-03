@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue-demi';
-var drawer = ref(false)
+var drawer:any = ref(false)
 
 </script>
 
@@ -13,9 +13,10 @@ var drawer = ref(false)
     </v-navigation-drawer>
     <v-app-bar
      
-      color="deep-purple accent-4"
+      
       dense
       dark
+      class="title-color"
     >
     
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
@@ -59,3 +60,8 @@ var drawer = ref(false)
     </v-app-bar>
   </div>
 </template>
+<style>
+  .title-color{
+    background-color: white !important;
+  }
+</style>
